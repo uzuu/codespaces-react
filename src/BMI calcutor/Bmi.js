@@ -2,8 +2,7 @@ import './Bmi.css'
 import Calbmi from './Calbmi';
 
 function Bmi() {
-    return
-    <div>
+    return    <div>
         <Calbmi/>
     </div>
 }

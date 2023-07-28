@@ -1,6 +1,6 @@
 import React, { useState } from 'react' 
 const Calbmi = () => {
-    return (  
+    return (
         <div><h1>BMI Calculator</h1></div>
     );
 }
