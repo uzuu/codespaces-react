@@ -32,3 +32,12 @@ h1{
   flex-direction: row;
   justify-content: space-around;
 }
+
+.btnClass{
+  color: gold;
+}
+.numbercount{
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 50px;
+}
