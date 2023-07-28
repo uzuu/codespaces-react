@@ -1,13 +1,19 @@
 import './App.css';
-import ToggleBtn from './components/ToggleBtn';
+import Countnumber from './components/Countnumber';
+import Decriment from './components/Decriment';
+import Increment from './components/Increment';
+import Resetbut from './components/Resetbut';
+
 function App() {
   return <div>
-    <div><h1>COUNTER APP</h1></div>
-    <ToggleBtn />
-    <ToggleBtn />
-    <ToggleBtn />
-    <ToggleBtn />
-    <ToggleBtn />
+    <h1>Counter App</h1>
+    <Countnumber/>
+    <div class="container"> 
+        <Increment/>
+        <Decriment/>
+        <Resetbut/>
+    </div>
+   
   </div>
 }
 
