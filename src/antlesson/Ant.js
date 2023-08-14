@@ -4,10 +4,10 @@ import './ant.css'
 
 const Ant1 = () =>  {
   const [sanasantoo, setSanasantoo] = useState(Math.floor(Math.random() * 100 + 1));
+  console.log('sanasantoo='+sanasantoo);
   const [urdun, setUrdun] = useState();
   const [utga, setUtga] = useState();
   const onChange = (value) => {
-    console.log('changed', value);
     setUtga(value);
    }
   const taah = () =>
