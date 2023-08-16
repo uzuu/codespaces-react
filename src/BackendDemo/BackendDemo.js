@@ -47,7 +47,8 @@ function BacknEnd() {
         setSagslasanbaaraa([...sagslasanbaaraa, sagsdata]);
         //console.log("sagsni baraa",sagslasanbaaraa);
    }
-    
+   
+   
 
     
     return (<div>
@@ -73,11 +74,11 @@ function BacknEnd() {
                                                 (data, i) =>
                                                 <div className='productbox' onClick={()=>DetailClick(data.id)}>
                                                 <img src={data.image} alt="" class="img"></img>
-                                                <p>{data.title}</p>
-                                                <p>{data.price}</p>
+                                                <p>{data.title}</p><p>{data.price}</p>
                                                 </div>
                                             )}
                                         </div>
+                                        
                                     </div>}
                     
                     {mode ==='detail' && <Detail cfunction={sagslah} data={detaildata}/>} 

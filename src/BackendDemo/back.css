@@ -104,6 +104,7 @@ a:hover {
 .imgsags{
     width: 100px;
     height: 100px;
+    text-align: start;
 }
 
 .sbox1{
@@ -112,4 +113,16 @@ a:hover {
 
 .sbox2{
     flex-grow: 1;
+}
+.sagsbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.unebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

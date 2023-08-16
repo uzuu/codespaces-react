@@ -20,6 +20,7 @@ function Detail(props) {
                     <p>Үнэ</p>
                     <h2>{baraa.price}</h2>
                     <button className="cbutton" onClick={()=>{sagslah(baraa)}}>САГСАНД НЭМЭХ</button>
+                    
                 </div>
             </div>
         </body>
