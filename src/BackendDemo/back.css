@@ -101,3 +101,15 @@ a:hover {
 }
 
 
+.imgsags{
+    width: 100px;
+    height: 100px;
+}
+
+.sbox1{
+    flex-grow: 2;
+}
+
+.sbox2{
+    flex-grow: 1;
+}

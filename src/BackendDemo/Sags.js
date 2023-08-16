@@ -7,19 +7,20 @@ const Sags = (props) => {
         <h3>Таны сагс</h3>
         <body className='dbody'>
             <div className="detailbox">
-                <div className="dbox1">
+                <div className="sbox1">
                     {baraa.map(
                         (data, i) =>
-                        <div className='productbox'>
-                            <img src={data.image} alt="" class="img"></img>
-                            <p>{data.title}</p>
-                            <p>{data.price}</p>
+                        <div className='sagsbox'>
+                            <div className='sagsbox1'><img src={data.image} alt="" class="imgsags"></img></div>
+                            <div className='sagsbox1'><p>{data.title}</p></div>
+                            <div className='sagsbox1'><p>{data.price}</p></div>
                         </div>
                     )}
                     
                 </div >
-                <div className="dbox2">
-                    
+                <div className="sbox2">
+                    <h3>Төлбөрийн мэдээлэл</h3>
+
                 </div>
             </div>
         </body>
