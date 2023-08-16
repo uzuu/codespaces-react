@@ -1,6 +1,26 @@
 body{
     background-color: whitesmoke;
 }
+
+.conheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color:blueviolet;
+    color:white;
+    
+}
+.boxheader1{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+.boxheader2{
+    flex-grow: 1;
+    text-align: end;
+    margin-right: 10px;
+    font-size: 40px;
+}
 .container{
     display: flex;
     flex-direction: row;
@@ -21,14 +41,47 @@ body{
     align-items: center;
     background-color: whitesmoke;
 }
-h1{
-    text-align: center;
-}
+
 img{
     width: 100px;
     height: 100px;
     margin-left:auto;
     margin-right: auto;
+}
+.detailimg{
+    width: 300px;
+    height: 300px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.detailbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dbody{
+    width: 80%;
+    margin:10%;
+}
+
+.dbox1{
+    flex-grow:1;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.dbox2{
+    flex-grow:1;
+    margin-left:auto;
+    margin-right: auto;
+}
+.cbutton{
+    width:100%;
+    height:50px;
+    font-size: 20px;
 }
 
 .productbox{
@@ -42,3 +95,9 @@ img{
 .productbox p {
     font-size:smaller;
 }
+
+a:hover {
+    color:red;
+}
+
+

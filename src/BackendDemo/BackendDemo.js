@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './back.css';
 import Detail from './Detail';
-
+import Sags from './Sags';
 
 function BacknEnd() {
     const [categordata, setCategordata] = useState([]);
     const [productdata, setProductdata] = useState([]);
     const [detaildata, setDetaildata] = useState();
+    const [sagslasanbaaraa, setSagslasanbaaraa] = useState([]);
     // detail
     const [mode, setMode] = useState('list');
     useEffect(()=>{ //buh code 1 udaa ehendee ajillana
@@ -25,6 +26,7 @@ function BacknEnd() {
         const data = await response.json();
       //  console.log(data);
         setProductdata(data);
+        setMode('list');
     }
     const onClickBox = async (categ) => {
         const response = await fetch("https://fakestoreapi.com/products/category/"+categ);
@@ -38,33 +40,50 @@ function BacknEnd() {
         setDetaildata(data);
         setMode('detail');
    }
+   const sags = () => {
+        setMode('sags');
+   }
+   const sagslah = (sagsdata) => {
+        setSagslasanbaaraa(sagsdata);
+        console.log("sagsni baraa",sagslasanbaaraa);
+   }
+    
+
     
     return (<div>
-
-                    <h1>Back end</h1>
                 <body>
-                    <div className="container">
-                        <div className="box1">
-                            <button onClick={proClick}>All product</button>
-                            {categordata.map(
-                                (data, i) => <ul>
-                                        <li><a onClick={() => onClickBox(data)}>{data}</a></li>
-                                    </ul>
-                            )}
-                        </div >
-                        <div className='box2' >
-                            {mode  ==='list' && productdata.map(
-                                (data, i) =>
-                                <div className='productbox' onClick={()=>DetailClick(data.id)}>
-                                <img src={data.image} alt="" class="img"></img>
-                                <p>{data.title}</p>
-                                <p>{data.price}</p>
-                                </div>
-                            ) }
-                            {mode ==='detail' && <Detail data={detaildata}/>} 
-                         {/* Detail companentruu  dataagaa damjuulna  */}
-                        </div>
-                    </div>
+                <div className="conheader">
+                    <div className="boxheader1"><h1>Back end</h1></div>
+                    <div className="boxheader2" onClick={sags}><a>Carc</a></div>
+                </div>
+                <div>
+                    <a onClick={proClick}> All product </a>
+                </div>
+                {mode  ==='list' && <div className="container">
+                                        <div className="box1">
+                                            
+                                            {categordata.map(
+                                                (data, i) => <ul>
+                                                        <li><a onClick={() => onClickBox(data)}>{data}</a></li>
+                                                    </ul>
+                                            )}
+                                        </div >
+                                        <div className='box2' >
+                                            {productdata.map(
+                                                (data, i) =>
+                                                <div className='productbox' onClick={()=>DetailClick(data.id)}>
+                                                <img src={data.image} alt="" class="img"></img>
+                                                <p>{data.title}</p>
+                                                <p>{data.price}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>}
+                    
+                    {mode ==='detail' && <Detail function={sagslah} data={detaildata}/>} 
+                     {/* Detail companentruu  dataagaa damjuulna  */}
+                     {mode ==='sags' && <Sags />} 
+                     {/* Detail companentruu  dataagaa damjuulna  */}
                 </body>
              </div>
     )
