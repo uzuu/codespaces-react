@@ -44,8 +44,8 @@ function BacknEnd() {
         setMode('sags');
    }
    const sagslah = (sagsdata) => {
-        setSagslasanbaaraa(sagsdata);
-        console.log("sagsni baraa",sagslasanbaaraa);
+        setSagslasanbaaraa([...sagslasanbaaraa, sagsdata]);
+        //console.log("sagsni baraa",sagslasanbaaraa);
    }
     
 
@@ -80,9 +80,9 @@ function BacknEnd() {
                                         </div>
                                     </div>}
                     
-                    {mode ==='detail' && <Detail function={sagslah} data={detaildata}/>} 
+                    {mode ==='detail' && <Detail cfunction={sagslah} data={detaildata}/>} 
                      {/* Detail companentruu  dataagaa damjuulna  */}
-                     {mode ==='sags' && <Sags />} 
+                     {mode ==='sags' && <Sags data={sagslasanbaaraa}/>} 
                      {/* Detail companentruu  dataagaa damjuulna  */}
                 </body>
              </div>

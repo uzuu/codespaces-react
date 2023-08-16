@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 
 function Detail(props) {
     const baraa= props.data;
-    console.log(baraa);
+    
     const sagslah = (baraa) => {
-       
+        //console.log(baraa);
+       props.cfunction(baraa)
     }
-
     return <div >
         <body className='dbody'>
             <div className="detailbox">
@@ -19,7 +19,7 @@ function Detail(props) {
                 <div className="dbox2">
                     <p>Үнэ</p>
                     <h2>{baraa.price}</h2>
-                    <button className="cbutton" onClick={()=>props.function(baraa)}>САГСАНД НЭМЭХ</button>
+                    <button className="cbutton" onClick={()=>{sagslah(baraa)}}>САГСАНД НЭМЭХ</button>
                 </div>
             </div>
         </body>
